@@ -11,6 +11,17 @@
 
     <dc-type>
         <schema>relation</schema>
+        <element>isInvoiceOfInvoiceItem</element>
+        <scope_note>Blabla faktura of polozka</scope_note>
+    </dc-type>
+    <dc-type>
+        <schema>relation</schema>
+        <element>isInvoiceItemOfInvoice</element>
+        <scope_note>Bla bla polozka of faktura</scope_note>
+    </dc-type>
+
+    <dc-type>
+        <schema>relation</schema>
         <element>isAuthorOfPublication</element>
         <scope_note>Contains all uuids of the "latest" AUTHORS that the current PUBLICATION links to via a relationship. In other words, this stores all relationships pointing from the current PUBLICATION to any AUTHOR where the AUTHOR is marked as "latest". Internally used by DSpace. Do not manually add, remove or edit values.</scope_note>
     </dc-type>
