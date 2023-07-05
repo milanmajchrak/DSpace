@@ -48,6 +48,67 @@
             </row>
         </form>
 
+        <!-- Configurable entities -->
+        <form name="invoiceStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the name of the file.</hint>
+                    <required>You must enter a name for this file</required>
+                </field>
+            </row>
+            <row>
+                <relation-field>
+                    <relationship-type>isInvoiceItemOfInvoice</relationship-type>
+                    <search-configuration>invoiceItem</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Invoice Item</label>
+                    <hint>Select the actual Item for this invoice</hint>
+                </relation-field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <repeatable>true</repeatable>
+                    <label>Description</label>
+                    <input-type>textarea</input-type>
+                    <hint>Enter a description for the file</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+        <form name="invoiceItemStep">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the name of the file.</hint>
+                    <required>You must enter a name for this file</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <repeatable>true</repeatable>
+                    <label>Description</label>
+                    <input-type>textarea</input-type>
+                    <hint>Enter a description for the file</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
+
         <!-- Form which defines the first page/section of the "traditional" DSpace submission process,
              often used when depositing normal Items (i.e. Items which are not Entities). -->
         <form name="traditionalpageone">

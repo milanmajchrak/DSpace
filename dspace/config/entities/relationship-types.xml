@@ -3,6 +3,20 @@
 
 <relationships>
 
+    <type>
+        <leftType>Invoice</leftType>
+        <rightType>InvoiceItem</rightType>
+        <leftwardType>isInvoiceItemOfInvoice</leftwardType>
+        <rightwardType>isInvoiceOfInvoiceItem</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+        <copyToLeft>true</copyToLeft>
+    </type>
+
 	<!-- Sample relationship types setup used for the entities development
 	 This file can be imported using the initialize-entities launcher -->
     <type>

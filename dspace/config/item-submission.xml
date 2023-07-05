@@ -33,7 +33,6 @@
              If you are using that demo dataset, you can simply uncomment the below configuration to enable Entity
              submission into all of the above Collections.
         -->
-        <!--
         <name-map collection-handle="123456789/3" submission-name="Publication"/>
         <name-map collection-handle="123456789/4" submission-name="Publication"/>
         <name-map collection-handle="123456789/281" submission-name="Publication"/>
@@ -46,7 +45,9 @@
         <name-map collection-handle="123456789/28" submission-name="Journal"/>
         <name-map collection-handle="123456789/29" submission-name="JournalVolume"/>
         <name-map collection-handle="123456789/30" submission-name="JournalIssue"/>
-        -->
+        <name-map collection-handle="123456789/1132" submission-name="Invoice"/>
+        <name-map collection-handle="123456789/1133" submission-name="InvoiceItem"/>
+
     </submission-map>
 
 
@@ -84,6 +85,16 @@
 
         <!-- The following set of DescribeStep <step-definition>s all point to forms (of the same name) which are
              defined in submission-forms.xml -->
+        <step-definition id="invoiceStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="invoiceItemStep" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
         <step-definition id="traditionalpageone" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -262,6 +273,21 @@
             <!-- <step id="cclicense"/> -->
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
+            <step id="license"/>
+        </submission-process>
+
+        <!-- CFG entities - MM -->
+        <submission-process name="Invoice">
+            <step id="collection"/>
+            <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
+            <step id="invoiceStep"/>
+            <step id="license"/>
+        </submission-process>
+
+        <submission-process name="InvoiceItem">
+            <step id="collection"/>
+            <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
+            <step id="invoiceItemStep"/>
             <step id="license"/>
         </submission-process>
 
