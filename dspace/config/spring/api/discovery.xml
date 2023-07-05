@@ -1857,14 +1857,14 @@
         <!--Which sidebar facets are to be displayed-->
         <property name="sidebarFacets">
             <list>
-                <ref bean="searchFilterAuthor"/>
+                <ref bean="searchFilterInvoiceItemCost"/>
             </list>
         </property>
         <!--The search filters which can be used on the discovery search page-->
         <property name="searchFilters">
             <list>
 <!--                <ref bean="searchFilterTitle"/>-->
-                <ref bean="searchFilterAuthor"/>
+                <ref bean="searchFilterInvoiceItemCost"/>
                 <ref bean="searchFilterIsInvoiceItemOfInvoiceRelation"/>
             </list>
         </property>
@@ -1873,11 +1873,7 @@
             <bean class="org.dspace.discovery.configuration.DiscoverySortConfiguration">
                 <property name="sortFields">
                     <list>
-<!--                        <ref bean="sortScore" />-->
-<!--                        <ref bean="sortPublicationVolumeNumber"/>-->
-                        <ref bean="sortTitle"/>
-<!--                        <ref bean="sortCreativeWorkDatePublished"/>-->
-<!--                        <ref bean="sortDateAccessioned"/>-->
+                        <ref bean="sortScore" />
                     </list>
                 </property>
             </bean>
@@ -1914,14 +1910,14 @@
         <!--Which sidebar facets are to be displayed-->
         <property name="sidebarFacets">
             <list>
-                <ref bean="searchFilterAuthor"/>
+                <ref bean="searchFilterInvoiceItemCost"/>
             </list>
         </property>
         <!--The search filters which can be used on the discovery search page-->
         <property name="searchFilters">
             <list>
-<!--                <ref bean="searchFilterTitle"/>-->
-                <ref bean="searchFilterAuthor"/>
+                <!--                <ref bean="searchFilterTitle"/>-->
+                <ref bean="searchFilterInvoiceItemCost"/>
                 <ref bean="searchFilterIsInvoiceItemOfInvoiceRelation"/>
             </list>
         </property>
@@ -1930,11 +1926,7 @@
             <bean class="org.dspace.discovery.configuration.DiscoverySortConfiguration">
                 <property name="sortFields">
                     <list>
-<!--                        <ref bean="sortScore" />-->
-<!--                        <ref bean="sortPublicationVolumeNumber"/>-->
-                        <ref bean="sortTitle"/>
-<!--                        <ref bean="sortCreativeWorkDatePublished"/>-->
-<!--                        <ref bean="sortDateAccessioned"/>-->
+                        <ref bean="sortScore" />
                     </list>
                 </property>
             </bean>
@@ -2835,6 +2827,23 @@
         </property>
         <property name="isOpenByDefault" value="false"/>
         <property name="pageSize" value="10"/>
+    </bean>
+
+    <bean id="searchFilterInvoiceItemCost"
+          class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="invoiceItemCost"/>
+        <property name="metadataFields">
+            <list>
+                <value>local.itemInvoice.cost</value>
+            </list>
+        </property>
+        <property name="type" value="date"/>
+        <property name="facetLimit" value="5"/>
+        <property name="sortOrderSidebar" value="COUNT"/>
+        <property name="sortOrderFilterPage" value="COUNT"/>
+        <property name="isOpenByDefault" value="true"/>
+        <property name="pageSize" value="10"/>
+        <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
 
     <bean id="searchFilterCreativeWorkPublisher" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">

@@ -33,20 +33,20 @@
              If you are using that demo dataset, you can simply uncomment the below configuration to enable Entity
              submission into all of the above Collections.
         -->
-        <name-map collection-handle="123456789/3" submission-name="Publication"/>
-        <name-map collection-handle="123456789/4" submission-name="Publication"/>
-        <name-map collection-handle="123456789/281" submission-name="Publication"/>
-        <name-map collection-handle="123456789/5" submission-name="Publication"/>
-        <name-map collection-handle="123456789/8" submission-name="OrgUnit"/>
-        <name-map collection-handle="123456789/6" submission-name="Person"/>
-        <name-map collection-handle="123456789/279" submission-name="Person"/>
-        <name-map collection-handle="123456789/7" submission-name="Project"/>
-        <name-map collection-handle="123456789/280" submission-name="Project"/>
-        <name-map collection-handle="123456789/28" submission-name="Journal"/>
-        <name-map collection-handle="123456789/29" submission-name="JournalVolume"/>
-        <name-map collection-handle="123456789/30" submission-name="JournalIssue"/>
-        <name-map collection-handle="123456789/1132" submission-name="Invoice"/>
-        <name-map collection-handle="123456789/1133" submission-name="InvoiceItem"/>
+<!--        <name-map collection-handle="123456789/3" submission-name="Publication"/>-->
+<!--        <name-map collection-handle="123456789/4" submission-name="Publication"/>-->
+<!--        <name-map collection-handle="123456789/281" submission-name="Publication"/>-->
+<!--        <name-map collection-handle="123456789/5" submission-name="Publication"/>-->
+<!--        <name-map collection-handle="123456789/8" submission-name="OrgUnit"/>-->
+        <name-map collection-handle="123456789/5" submission-name="Person"/>
+<!--        <name-map collection-handle="123456789/279" submission-name="Person"/>-->
+<!--        <name-map collection-handle="123456789/7" submission-name="Project"/>-->
+<!--        <name-map collection-handle="123456789/280" submission-name="Project"/>-->
+<!--        <name-map collection-handle="123456789/28" submission-name="Journal"/>-->
+<!--        <name-map collection-handle="123456789/29" submission-name="JournalVolume"/>-->
+<!--        <name-map collection-handle="123456789/30" submission-name="JournalIssue"/>-->
+        <name-map collection-handle="123456789/2" submission-name="Invoice"/>
+        <name-map collection-handle="123456789/3" submission-name="InvoiceItem"/>
 
 
     </submission-map>

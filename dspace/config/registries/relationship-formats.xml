@@ -19,6 +19,11 @@
         <element>isInvoiceItemOfInvoice</element>
         <scope_note>Bla bla polozka of faktura</scope_note>
     </dc-type>
+    <dc-type>
+        <schema>relation</schema>
+        <element>isCustomerOfInvoice</element>
+        <scope_note>Bla bla customer of Invoice</scope_note>
+    </dc-type>
 
     <dc-type>
         <schema>relation</schema>

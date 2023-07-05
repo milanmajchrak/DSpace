@@ -72,6 +72,27 @@
                 </relation-field>
             </row>
             <row>
+                <relation-field>
+                    <relationship-type>isCustomerOfInvoice</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Customer</label>
+                    <hint>Enter the Customer for this Invoice</hint>
+                    <linked-metadata-field>
+                        <dc-schema>local</dc-schema>
+                        <dc-element>invoice</dc-element>
+                        <dc-qualifier>customer</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
@@ -94,6 +115,18 @@
                     <input-type>onebox</input-type>
                     <hint>Enter the name of the file.</hint>
                     <required>You must enter a name for this file</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>local</dc-schema>
+                    <dc-element>itemInvoice</dc-element>
+                    <dc-qualifier>cost</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Cost</label>
+                    <input-type>onebox</input-type>
+                    <hint>What is a cost of this Invoice Item</hint>
+                    <required></required>
                 </field>
             </row>
             <row>

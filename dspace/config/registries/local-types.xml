@@ -23,13 +23,18 @@
     <namespace>http://dspace.org/namespace/local/</namespace>
   </dc-schema>
 
-<!--
   <dc-type>
     <schema>local</schema>
-    <element></element>
-    <qualifier></qualifier>
-    <scope_note>Description of example metadata field.</scope_note>
+    <element>itemInvoice</element>
+    <qualifier>cost</qualifier>
+    <scope_note>Cost of the Item Invoice</scope_note>
   </dc-type>
--->
+
+  <dc-type>
+    <schema>local</schema>
+    <element>invoice</element>
+    <qualifier>customer</qualifier>
+    <scope_note>Customer of the Invoice</scope_note>
+  </dc-type>
 
 </dspace-dc-types>
