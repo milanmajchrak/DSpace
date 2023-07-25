@@ -1329,6 +1329,7 @@
                 <ref bean="searchFilterIsOrgUnitOfPersonRelation"/>
                 <ref bean="searchFilterIsProjectOfPersonRelation"/>
                 <ref bean="searchFilterIsPublicationOfAuthorRelation"/>
+                <ref bean="searchFilterIsCustomerOfInvoiceRelation"/>
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -1866,6 +1867,7 @@
 <!--                <ref bean="searchFilterTitle"/>-->
                 <ref bean="searchFilterInvoiceItemCost"/>
                 <ref bean="searchFilterIsInvoiceItemOfInvoiceRelation"/>
+                <ref bean="searchFilterIsCustomerOfInvoiceRelation"/>
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -1919,6 +1921,7 @@
                 <!--                <ref bean="searchFilterTitle"/>-->
                 <ref bean="searchFilterInvoiceItemCost"/>
                 <ref bean="searchFilterIsInvoiceItemOfInvoiceRelation"/>
+                <ref bean="searchFilterIsCustomerOfInvoiceRelation"/>
             </list>
         </property>
         <!--The sort filters for the discovery search-->
@@ -2823,6 +2826,17 @@
         <property name="metadataFields">
             <list>
                 <value>relation.isInvoiceItemOfInvoice</value>
+            </list>
+        </property>
+        <property name="isOpenByDefault" value="false"/>
+        <property name="pageSize" value="10"/>
+    </bean>
+
+    <bean id="searchFilterIsCustomerOfInvoiceRelation" class="org.dspace.discovery.configuration.DiscoverySearchFilter">
+        <property name="indexFieldName" value="isCustomerOfInvoice"/>
+        <property name="metadataFields">
+            <list>
+                <value>relation.isCustomerOfInvoice</value>
             </list>
         </property>
         <property name="isOpenByDefault" value="false"/>
