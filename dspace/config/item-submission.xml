@@ -281,14 +281,14 @@
             <step id="collection"/>
             <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
             <step id="invoiceStep"/>
-            <step id="license"/>
+<!--            <step id="license"/>-->
         </submission-process>
 
         <submission-process name="InvoiceItem">
             <step id="collection"/>
             <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
             <step id="invoiceItemStep"/>
-            <step id="license"/>
+<!--            <step id="license"/>-->
         </submission-process>
 
         <!--
